@@ -3,13 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "CI=false && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "vitest",
-    "coverage": "vitest run --coverage",
+    "test:watch": "vitest run --watch",
+    "test:coverage": "vitest run --coverage",
     "lint:prettier": "prettier --check .",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
